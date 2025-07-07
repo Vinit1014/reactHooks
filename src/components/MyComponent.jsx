@@ -1,8 +1,17 @@
-import React, {useMemo} from 'react'
+import React, {useMemo, useEffect, useCallback} from 'react'
 import users_data from '../users_data.json';
 const MyComponent = (props) => {
     const totalEntries = useMemo(()=> getLen(users_data), []);
-    window.addEventListener("load", () => console.log("Loaded"));
+
+    const handleOnWindowLoad = useCallback(() => {
+        console.log("Window loaded");
+    })
+    useEffect(() => {
+        window.addEventListener("load", handleOnWindowLoad);
+        return () => {
+            window.removeEventListener("load", handleOnWindowLoad);
+        }
+    }, [])
 
     function getLen(arr){
         console.log("I am calculating...");
