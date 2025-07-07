@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 import './App.css'
-import MyComponent from './components/MyComponent'
+const MyComponent = React.lazy(() => import('./components/MyComponent'))
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,7 +9,10 @@ function App() {
   return (
     <>
       <div>
-        <MyComponent state={count}/>
+        <Suspense fallback={<p>Loading...</p>}>
+          <MyComponent state={count}/>
+        </Suspense>
+        <h1>Hele</h1>
         <button onClick={() => setCount((click) => click + 1)}>Increment</button>
       </div>
     </>
