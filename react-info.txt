@@ -1,0 +1,19 @@
+React - A JavaScript library for building user interfaces
+
+Key Concepts:
+- Components  : Reusable UI building blocks (functional or class-based)
+- JSX         : Syntax extension that lets you write HTML-like code in JavaScript
+- Props        : Read-only data passed from parent to child components
+- State        : Mutable data managed within a component
+- Hooks        : Functions to use state and lifecycle features in functional components
+- Virtual DOM : React's in-memory representation of the real DOM for efficient updates
+- Lifecycle    : Mounting, updating, and unmounting phases of a component
+
+Common Hooks:
+- useState    : Manage local state
+- useEffect   : Handle side effects (fetch, subscriptions, timers)
+- useContext  : Access context without prop drilling
+- useRef      : Persist values or reference DOM elements
+- useMemo     : Memoize expensive computations
+- useCallback : Memoize functions to avoid unnecessary re-renders
+
