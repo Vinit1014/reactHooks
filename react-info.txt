@@ -11,7 +11,7 @@ Key Concepts:
 
 Common Hooks:
 - useState    : Manage local state
-- useEffect   : Handle side effects (fetch, subscriptions, timers) etc
+- useEffect   : Handle side effects (fetch, subscriptions, timers)
 - useContext  : Access context without prop drilling
 - useRef      : Persist values or reference DOM elements
 - useMemo     : Memoize expensive computations
