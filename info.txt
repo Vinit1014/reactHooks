@@ -18,4 +18,6 @@ Rules of Hooks:
 
 Custom Hooks:
 You can create your own hooks to extract and reuse stateful logic across components.
-abcdefxyz
+
+
+git_operation is still not triggering and also the terminal ends only show the exitCode but not the output of what command exectued,
